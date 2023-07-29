@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DiagnoseCamera">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/themeColor"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@id/scanscroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:clickable="true"
+            android:contentDescription="Side Menu"
+            android:src="@drawable/newlogo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/sansation_regular"
+                android:text="@string/app_name"
+                android:textColor="@color/customBlack"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scanscroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topbar2">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/scan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/sansation_regular"
+                android:gravity="center_horizontal"
+                android:lineHeight="36px"
+                android:text="Scan the leaf"
+                android:textColor="@color/customBlack"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp">
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/camera"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:lines="1"
+                    android:text="camera selection"
+                    android:textAllCaps="false"
+                    android:visibility="invisible"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/leaf_image"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
+                    android:background="@drawable/preview"
+                    app:layout_constraintTop_toTopOf="@+id/camera"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                     />
+
+                <LinearLayout
+                    android:id="@+id/ll1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/camera"
+                    app:layout_constraintStart_toStartOf="@+id/camera"
+                    app:layout_constraintTop_toBottomOf="@id/leaf_image">
+
+                    <ImageView
+                        android:id="@+id/cameraImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/camera" />
+
+                    <ImageView
+                        android:id="@+id/galleryImg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/gallery" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/predict"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:textSize="18sp"
+                    app:strokeColor="@color/themeColor"
+                    android:fontFamily="@font/sansation_regular"
+                    android:enabled="false"
+                    android:text="Predict"
+                    android:textColor="@color/customBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll1" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

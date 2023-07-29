@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:padding="12dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textStyle="bold"
+            android:layout_margin="4dp"
+            android:textSize="22sp"
+            android:textColor="@color/customBlack"
+            android:id="@+id/productTitle"
+            android:fontFamily="@font/sansation_regular"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price : 1200rs"
+            android:textSize="18sp"
+            android:layout_margin="4dp"
+            android:textColor="@color/customBlack"
+            android:id="@+id/productPrice"
+            android:fontFamily="@font/sansation_regular"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivered"
+            android:layout_margin="4dp"
+            android:layout_gravity="end"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/customBlack"
+            android:id="@+id/productStatus"
+            android:fontFamily="@font/sansation_regular"
+            />
+
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

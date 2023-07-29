@@ -1,0 +1,36 @@
+corn maize cercospora leaf spot gray leaf spot
+corn maize common rust 
+corn maize northern leaf blight
+corn maize healthy
+Cotton blight
+Cotton boll rot
+Cotton rust
+pepper bell bacterial spot
+pepper bell healthy
+potato early blight
+potato late blight
+potato healthy
+Rice Bacterial leaf blight
+Rice Brown spot
+Rice Leaf smut
+soybean healthy
+Sugarcane Blight
+Sugarcane Healthy
+Sugarcane Red Rot
+tomato bacterial spot
+tomato early blight
+tomato late blight
+tomato leaf mold
+tomato septoria leaf spot
+tomato spider mites two spotted spider mite
+tomato target spot
+tomato tomato yellow leaf curl virus
+tomato tomato mosaic virus
+tomato healthy
+diseased cotton leaf
+diseased cotton plant
+fresh cotton leaf
+fresh cotton plant
+wheatleaf Healthy
+wheatleaf septoria
+wheatleaf stripe rust

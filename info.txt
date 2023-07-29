@@ -1,0 +1,18 @@
+    <color name="thunderstorm">#1361FD</color>
+    <color name="drizzle">#526FA8</color>
+    <color name="rain">#0E8EFF</color>
+    <color name="snow">#987CFF</color>
+    <color name="atmosphere">#A8B4CC</color>
+    <color name="clear">#FF9D6F</color>
+    <color name="clouds">#454A4C</color>
+
+
+    implementation 'com.google.android.gms:play-services-location:21.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>

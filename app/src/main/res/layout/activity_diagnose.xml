@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Diagnose"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/topbar1"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/themeColor"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toTopOf="@id/selectnote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:clickable="true"
+            android:contentDescription="Side Menu"
+            android:src="@drawable/newlogo" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/sansation_regular"
+                android:text="@string/app_name"
+                android:textColor="@color/customBlack"
+                android:textSize="28sp" />
+        </LinearLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <TextView
+        android:id="@+id/selectnote"
+        android:layout_width="match_parent"
+        android:text="Choose Your Crop"
+        android:padding="8dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/sansation_regular"
+        android:textColor="@color/customBlack"
+        app:layout_constraintBottom_toTopOf="@id/diagnosescroll"
+        app:layout_constraintTop_toBottomOf="@id/topbar1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/diagnosescroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="16dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/selectnote"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cottonimg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/cotton"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/cotton"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/cotton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:textSize="18sp"
+                    app:strokeColor="@color/themeColor"
+                    android:fontFamily="@font/sansation_regular"
+                    android:text="Cotton Leaf"
+                    android:textColor="@color/customBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/cottonimg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/potatoimg"
+                    android:layout_width="40dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/potato"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/potato"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:id="@+id/potato"
+                    android:layout_width="0dp"
+                    android:layout_margin="8dp"
+                    android:text="Potato Leaf"
+                    android:fontFamily="@font/sansation_regular"
+                    android:textColor="@color/customBlack"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:textSize="18sp"
+                    app:strokeColor="@color/themeColor"
+                    app:layout_constraintLeft_toRightOf="@id/potatoimg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
+            android:elevation="5dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="8dp"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/cornimg"
+                    android:layout_width="40dp"
+                    android:layout_margin="8dp"
+                    android:src="@drawable/corn"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/corn"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:id="@+id/corn"
+                    android:layout_width="0dp"
+                    android:layout_margin="8dp"
+                    android:text="Corn Leaf"
+                    android:fontFamily="@font/sansation_regular"
+                    android:textColor="@color/customBlack"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:textSize="18sp"
+                    app:strokeColor="@color/themeColor"
+                    app:layout_constraintLeft_toRightOf="@id/cornimg"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/grapeimg"
+                        android:layout_width="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/grape"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/grape"
+                        android:layout_height="40dp"/>
+
+                    <Button
+                        android:id="@+id/grape"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        android:text="Grapes Leaf"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="@color/customBlack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/grapeimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/bananaimg"
+                        android:layout_width="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/bananas"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/banana"
+                        android:layout_height="40dp"/>
+                    <Button
+                        android:id="@+id/banana"
+                        android:layout_width="0dp"
+                        android:layout_margin="8dp"
+                        android:text="Banana Leaf"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="@color/customBlack"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        app:layout_constraintLeft_toRightOf="@id/bananaimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/bellimg"
+                        android:layout_width="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/berry"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/bell"
+                        android:layout_height="40dp"/>
+                    <Button
+                        android:id="@+id/bell"
+                        android:layout_width="0dp"
+                        android:layout_margin="8dp"
+                        android:text="Bell Leaf"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="@color/customBlack"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        app:layout_constraintLeft_toRightOf="@id/bellimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/appleimg"
+                        android:layout_width="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/apple"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/apple"
+                        android:layout_height="40dp"/>
+                    <Button
+                        android:id="@+id/apple"
+                        android:layout_width="0dp"
+                        android:layout_margin="8dp"
+                        android:text="Apple Leaf"
+                        android:fontFamily="@font/sansation_regular"
+                        android:textColor="@color/customBlack"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        app:layout_constraintLeft_toRightOf="@id/appleimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:layout_height="wrap_content"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/wheatimg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/wheat"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/wheat"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/wheat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        android:fontFamily="@font/sansation_regular"
+                        android:text="Wheat Leaf"
+                        android:textColor="@color/customBlack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/wheatimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sugarcaneimg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/sugarcane"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/sugarcane"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/sugarcane"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        android:fontFamily="@font/sansation_regular"
+                        android:text="Sugarcane Leaf"
+                        android:textColor="@color/customBlack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/sugarcaneimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_margin="8dp"
+                android:elevation="5dp"
+                android:backgroundTint="@color/white"
+                app:cardCornerRadius="8dp"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/chiliimg"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/chili"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/chili"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/chili"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        style="@style/Widget.Material3.Button.OutlinedButton"
+                        android:textSize="18sp"
+                        app:strokeColor="@color/themeColor"
+                        android:fontFamily="@font/sansation_regular"
+                        android:text="Chili Leaf"
+                        android:textColor="@color/customBlack"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@id/chiliimg"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

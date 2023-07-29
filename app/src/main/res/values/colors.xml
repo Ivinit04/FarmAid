@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#CAEEC2</color>
+    <color name="purple_500">#52B788</color>
+    <color name="purple_700">#52B788</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!--custom color-->
+
+    <color name="introC1">#CAEEC2</color>
+    <color name="introC2">#E5F6DF</color>
+    <color name="introC3">#F0FFFF</color>
+    <color name="themeColor">#52B788</color>
+    <color name="custom_color_text_secondary">#464747</color>
+    <color name="customBlack">#252525</color>
+    <color name="card_color">#EAFAF1</color>
+
+    <color name="thunderstorm">#1361FD</color>
+    <color name="drizzle">#526FA8</color>
+    <color name="rain">#0E8EFF</color>
+    <color name="snow">#987CFF</color>
+    <color name="atmosphere">#A8B4CC</color>
+    <color name="clear">#FF9D6F</color>
+    <color name="clouds">#454A4C</color>
+</resources>
